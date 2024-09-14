@@ -1,0 +1,59 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+    body, p {
+        @apply font-normal text-[15px] md:text-[13px] lg:text-[18px] text-[#252931] leading-[165%];
+    }
+
+    h1, h2, h3, h4, h5, h6 {
+        @apply font-display;
+    }
+
+    h1, .display-h1 {
+        @apply text-[28px] lg:text-[51px] font-normal leading-[118%] -tracking-[1px];
+    }
+
+    h2, .display-2 {
+        @apply text-[20px] lg:text-[36px] font-bold leading-[114%];
+    }
+
+    h3, .display-3 {
+        @apply text-[15px] lg:text-[24px] font-bold leading-[114%];
+    }
+}
+
+@layer components {
+    .btn {
+        @apply inline-flex items-center justify-center gap-1 lg:gap-2 text-[#6B3089] text-[14px] lg:text-[18px] font-semibold font-sans leading-[120%] tracking-[1px] transition;
+    }
+
+    .btn i {
+        @apply text-[18px] lg:text-[24px];
+    }
+
+    .btn-primary {
+        @apply h-[40px] lg:h-[54px] px-3 lg:px-6 rounded bg-primary text-white hover:bg-primary-700;
+    }
+
+    .btn-white {
+        @apply h-[40px] lg:h-[54px] px-3 lg:px-6 rounded bg-white text-[#002540] hover:bg-white/90;
+    }
+
+    .btn-outline {
+        @apply h-[40px] lg:h-[54px] px-3 lg:px-6 rounded bg-transparent border border-[#6B3089] hover:bg-[#6B3089]/10;
+    }
+
+    .btn-lg {
+        @apply text-[20px] h-[64px] rounded-lg;
+    }
+
+    .btn-normal {
+        @apply text-[14px] lg:text-[18px] h-[40px] lg:h-[54px] rounded;
+    }
+
+    .text-underline {
+        @apply relative z-[1] before:content-[''] before:absolute before:-z-[1] before:h-2 before:w-full before:bg-[#F0EAF3] before:-bottom-[1px] before:left-0;
+    }
+}

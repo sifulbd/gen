@@ -1,0 +1,17 @@
+{
+  "name": "gen-zed",
+  "version": "1.0.0",
+  "description": "``` ./tailwindcss init ```",
+  "private": false,
+  "main": "tailwind.config.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "tailwindcss": "npx tailwindcss -i ./assets/lib/tailwind.input.css -o ./assets/lib/tailwind.css --watch",
+    "dev": "npm run tailwindcss"
+  },
+  "author": "Santush Deb Nath",
+  "license": "ISC",
+  "devDependencies": {
+    "tailwindcss": "^3.4.9"
+  }
+}
