@@ -14,6 +14,9 @@
 
         <!--  theme style  -->
         <link href="../assets/lib/tailwind.css" rel="stylesheet" />
+        <link href="../assets/lib/modal-video.min.css" rel="stylesheet" />
+        <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.css" />
+        <link rel="stylesheet" type="text/css" href="//cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick-theme.css" />
     </head>
     <body>
         <main class="overflow-clip">
@@ -38,44 +41,117 @@
                                 <!-- Desktop Menu -->
                                 <ul class="hidden lg:flex gap-3">
                                     <li>
-                                        <div class="relative inline-block text-left">
-                                            <a href="#" data-dropdown-toggle="dropdown-whyChooseUs" data-expand-on-hover="true" class="inline-flex items-center gap-1 font-medium font-display text-[13px] text-[#5C5C5C] hover:text-primary text-nowrap">Why choose us <i class="ph ph-caret-down"></i></a>
-                                            <div id="dropdown-whyChooseUs" class="hidden absolute right-0 z-10 w-40 origin-top-right rounded-md bg-white shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none" role="menu" aria-orientation="vertical" aria-labelledby="menu-button" tabindex="-1">
-                                                <div class="py-1" role="none">
-                                                    <a href="#" class="block px-4 py-2 text-sm text-gray-700" role="menuitem" tabindex="-1">Option 1</a>
-                                                    <a href="#" class="block px-4 py-2 text-sm text-gray-700" role="menuitem" tabindex="-1">Option 2</a>
-                                                </div>
+                                        <a href="#" id="mega-menu-dropdown-button" data-dropdown-toggle="mega-menu-dropdown" class="flex items-center justify-between w-80 font-medium font-display text-[13px] text-[#5C5C5C] hover:text-primary text-nowrap"> Why choose us <i class="ph ph-caret-down pl-2"></i> </a>
+                                        <div id="mega-menu-dropdown" class="absolute z-10 grid hidden w-80 grid-cols-2 text-sm bg-white border border-gray-100 rounded-lg shadow-md dark:border-gray-700 md:grid-cols-3 dark:bg-gray-700">
+                                            <div class="p-4 pb-0 text-gray-900 md:pb-4 dark:text-white">
+                                                <ul class="space-y-4" aria-labelledby="mega-menu-dropdown-button">
+                                                    <li>
+                                                        <a href="#" class="text-gray-500 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-500"> About Us </a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="#" class="text-gray-500 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-500"> Library </a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="#" class="text-gray-500 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-500"> Resources </a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="#" class="text-gray-500 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-500"> Pro Version </a>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                            <div class="p-4 pb-0 text-gray-900 md:pb-4 dark:text-white">
+                                                <ul class="space-y-4">
+                                                    <li>
+                                                        <a href="#" class="text-gray-500 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-500"> Blog </a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="#" class="text-gray-500 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-500"> Newsletter </a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="#" class="text-gray-500 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-500"> Playground </a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="#" class="text-gray-500 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-500"> License </a>
+                                                    </li>
+                                                </ul>
                                             </div>
                                         </div>
                                     </li>
                                     <li>
-                                        <div class="relative inline-block text-left">
-                                            <a href="#" data-dropdown-toggle="dropdown-whatWeDo" data-expand-on-hover="true" class="inline-flex items-center gap-1 font-medium font-display text-[13px] text-[#5C5C5C] hover:text-primary text-nowrap">
-                                                What we do
-                                                <i class="ph ph-caret-down"></i
-                                            ></a>
-                                            <div id="dropdown-whatWeDo" class="hidden absolute right-0 z-10 w-40 origin-top-right rounded-md bg-white shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none" role="menu" aria-orientation="vertical" aria-labelledby="menu-button" tabindex="-1">
-                                                <div class="py-1" role="none">
-                                                    <a href="#" class="block px-4 py-2 text-sm text-gray-700" role="menuitem" tabindex="-1">Option 1</a>
-                                                    <a href="#" class="block px-4 py-2 text-sm text-gray-700" role="menuitem" tabindex="-1">Option 2</a>
-                                                </div>
+                                        <a href="#" id="mega-menu-dropdown-button2" data-dropdown-toggle="mega-menu-dropdown2" class="flex items-center justify-between w-80 font-medium font-display text-[13px] text-[#5C5C5C] hover:text-primary text-nowrap"> Who we help <i class="ph ph-caret-down pl-2"></i> </a>
+                                        <div id="mega-menu-dropdown2" class="absolute z-10 grid hidden w-80 grid-cols-2 text-sm bg-white border border-gray-100 rounded-lg shadow-md dark:border-gray-700 md:grid-cols-3 dark:bg-gray-700">
+                                            <div class="p-4 pb-0 text-gray-900 md:pb-4 dark:text-white">
+                                                <ul class="space-y-4" aria-labelledby="mega-menu-dropdown-button2">
+                                                    <li>
+                                                        <a href="#" class="text-gray-500 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-500"> About Us </a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="#" class="text-gray-500 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-500"> Library </a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="#" class="text-gray-500 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-500"> Resources </a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="#" class="text-gray-500 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-500"> Pro Version </a>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                            <div class="p-4 pb-0 text-gray-900 md:pb-4 dark:text-white">
+                                                <ul class="space-y-4">
+                                                    <li>
+                                                        <a href="#" class="text-gray-500 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-500"> Blog </a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="#" class="text-gray-500 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-500"> Newsletter </a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="#" class="text-gray-500 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-500"> Playground </a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="#" class="text-gray-500 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-500"> License </a>
+                                                    </li>
+                                                </ul>
                                             </div>
                                         </div>
                                     </li>
                                     <li>
-                                        <div class="relative inline-block text-left">
-                                            <a href="#" data-dropdown-toggle="dropdown-whoWeHelp" data-expand-on-hover="true" class="inline-flex items-center gap-1 font-medium font-display text-[13px] text-[#5C5C5C] hover:text-primary text-nowrap">
-                                                Who we help
-                                                <i class="ph ph-caret-down"></i
-                                            ></a>
-                                            <div id="dropdown-whoWeHelp" class="hidden absolute right-0 z-10 w-40 origin-top-right rounded-md bg-white shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none" role="menu" aria-orientation="vertical" aria-labelledby="menu-button" tabindex="-1">
-                                                <div class="py-1" role="none">
-                                                    <a href="#" class="block px-4 py-2 text-sm text-gray-700" role="menuitem" tabindex="-1">Option 1</a>
-                                                    <a href="#" class="block px-4 py-2 text-sm text-gray-700" role="menuitem" tabindex="-1">Option 2</a>
-                                                </div>
+                                        <a href="#" id="mega-menu-dropdown-button3" data-dropdown-toggle="mega-menu-dropdown3" class="flex items-center justify-between w-80 font-medium font-display text-[13px] text-[#5C5C5C] hover:text-primary text-nowrap"> What we do <i class="ph ph-caret-down pl-2"></i> </a>
+                                        <div id="mega-menu-dropdown3" class="absolute z-10 grid hidden w-80 grid-cols-2 text-sm bg-white border border-gray-100 rounded-lg shadow-md dark:border-gray-700 md:grid-cols-3 dark:bg-gray-700">
+                                            <div class="p-4 pb-0 text-gray-900 md:pb-4 dark:text-white">
+                                                <ul class="space-y-4" aria-labelledby="mega-menu-dropdown-button3">
+                                                    <li>
+                                                        <a href="#" class="text-gray-500 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-500"> About Us Library</a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="#" class="text-gray-500 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-500"> Library </a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="#" class="text-gray-500 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-500"> Resources </a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="#" class="text-gray-500 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-500"> Pro Version </a>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                            <div class="p-4 pb-0 text-gray-900 md:pb-4 dark:text-white">
+                                                <ul class="space-y-4">
+                                                    <li>
+                                                        <a href="#" class="text-gray-500 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-500"> Blog and Newsletter</a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="#" class="text-gray-500 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-500"> Newsletter </a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="#" class="text-gray-500 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-500"> Playground </a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="#" class="text-gray-500 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-500"> License </a>
+                                                    </li>
+                                                </ul>
                                             </div>
                                         </div>
                                     </li>
+
                                     <li>
                                         <a href="#" class="hidden xl:inline-flex items-center gap-1 font-medium font-display text-[13px] text-[#5C5C5C] hover:text-primary text-nowrap"> Free Startup Advice </a>
                                     </li>
@@ -158,7 +234,8 @@
                                     <a href="#" class="btn btn-primary w-full md:w-auto">
                                         <span>Get in touch</span>
                                     </a>
-                                    <a href="#" class="btn btn-outline w-full md:w-auto">
+                                    <!-- Add youtube video id -->
+                                    <a href="#" class="btn btn-outline w-full md:w-auto js-modal-btn" data-video-id="xckmjiNJQPg">
                                         <i class="ph ph-play-circle"></i>
                                         <span>How we work</span>
                                     </a>
@@ -166,7 +243,7 @@
                             </div>
                         </div>
                         <div class="order-1 md:order-3 mt-8 lg:mt-0">
-                            <img src="../assets/images/header-play.png" alt="" class="max-w-[528px] w-full mx-auto" />
+                            <img src="../assets/images/header-play.png" alt="" class="max-w-[528px] w-full mx-auto js-modal-btn cursor-pointer" data-video-id="xckmjiNJQPg" />
                         </div>
                     </div>
                 </div>
@@ -737,46 +814,85 @@
                         <h2 class="capitalize">What Our Client Says <span class="text-underline">About Us</span></h2>
                     </div>
                     <div class="mt-[30px] md:mt-[50px] lg:mt-[80px]">
-                        <div class="flex items-center gap-6">
-                            <div class="hidden md:block">
-                                <a href="#" class="grid place-content-center w-9 lg:w-12 aspect-square rounded-full bg-brand-50 hover:bg-brand-100/50 transition">
-                                    <i class="ph-bold ph-caret-left"></i>
-                                </a>
-                            </div>
-                            <div class="flex-1">
-                                <div class="relative z-[2] grid place-content-center bg-white w-[100px] md:w-[64px] lg:w-[120px] aspect-square rounded-full border-2 border-brand-50 mx-auto md:-mb-[32px] lg:-mb-[60px]">
-                                    <img src="../assets/images/testimonial-logo.png" alt="" class="w-[46px] md:w-[30px] lg:w-[56px]" />
-                                </div>
-                                <div class="relative z-[1] md:border border-brand bg-white p-6 lg:p-[64px] rounded-lg md:rounded-[48px] text-center mt-6 md:mt-0=0">
-                                    <div class="max-w-[374px] lg:max-w-[667px] mx-auto md:pt-[32px] lg:pt-[40px]">
-                                        <h3 class="text-[18px] lg:text-[30px] text-brand font-bold">Ben Smith</h3>
-                                        <p class="text-[14px] lg:text-[20px] mt-4">Genzed have managed the finances for Ad Signal for a considerable amount of time. They have ensured the smooth running of the company's finances and given the Company's board excellent visibility of the Company's finances.</p>
-                                        <div class="text-[#002540] mt-8 !leading-[120%]">
-                                            <span class="block text-md font-bold">CFO</span>
-                                            <span class="">Middlesex Cricket Club</span>
+                        <!-- Slick Slider Container -->
+                        <div class="testimonial-slider">
+                            <!-- Single Slide Item -->
+                            <div>
+                                <div class="flex items-center gap-6">
+                                    <div class="hidden md:block">
+                                        <a href="#" class="grid place-content-center w-9 lg:w-12 aspect-square rounded-full bg-brand-50 hover:bg-brand-100/50 transition prev-arrow">
+                                            <i class="ph-bold ph-caret-left"></i>
+                                        </a>
+                                    </div>
+                                    <div class="flex-1">
+                                        <div class="relative z-[2] grid place-content-center bg-white w-[100px] md:w-[64px] lg:w-[120px] aspect-square rounded-full border-2 border-brand-50 mx-auto md:-mb-[32px] lg:-mb-[60px]">
+                                            <img src="../assets/images/testimonial-logo.png" alt="" class="w-[46px] md:w-[30px] lg:w-[56px]" />
+                                        </div>
+                                        <div class="relative z-[1] md:border border-brand bg-white p-6 lg:p-[64px] rounded-lg md:rounded-[48px] text-center mt-6 md:mt-0">
+                                            <div class="max-w-[374px] lg:max-w-[667px] mx-auto md:pt-[32px] lg:pt-[40px]">
+                                                <h3 class="text-[18px] lg:text-[30px] text-brand font-bold">Ben Smith</h3>
+                                                <p class="text-[14px] lg:text-[20px] mt-4">Genzed have managed the finances for Ad Signal for a considerable amount of time. They have ensured the smooth running of the company's finances and given the Company's board excellent visibility of the Company's finances.</p>
+                                                <div class="text-[#002540] mt-8 !leading-[120%]">
+                                                    <span class="block text-md font-bold">CFO</span>
+                                                    <span>Middlesex Cricket Club</span>
+                                                </div>
+                                            </div>
+                                            <img src="../assets/images/quote.png" alt="" class="hidden md:block absolute -z-[1] left-6 md:left-[64px] top-6 md:top-[64px] rotate-180 w-[27px] lg:w-[40px]" />
+                                            <img src="../assets/images/quote.png" alt="" class="hidden md:block absolute -z-[1] right-6 md:right-[64px] bottom-6 md:bottom-[64px] w-[27px] lg:w-[40px]" />
                                         </div>
                                     </div>
-
-                                    <img src="../assets/images/quote.png" alt="" class="hidden md:block absolute -z-[1] left-6 md:left-[64px] top-6 md:top-[64px] rotate-180 w-[27px] lg:w-[40px]" />
-                                    <img src="../assets/images/quote.png" alt="" class="hidden md:block absolute -z-[1] right-6 md:right-[64px] bottom-6 md:bottom-[64px] w-[27px] lg:w-[40px]" />
+                                    <div class="hidden md:block">
+                                        <a href="#" class="grid place-content-center w-9 lg:w-12 aspect-square rounded-full bg-brand-50 hover:bg-brand-100/50 transition next-arrow">
+                                            <i class="ph ph-caret-right"></i>
+                                        </a>
+                                    </div>
                                 </div>
                             </div>
-                            <div class="hidden md:block">
-                                <a href="#" class="grid place-content-center w-9 lg:w-12 aspect-square rounded-full bg-brand-50 hover:bg-brand-100/50 transition">
-                                    <i class="ph ph-caret-right"></i>
-                                </a>
+                            <!-- Duplicate Slide Item for Illustration -->
+                            <div>
+                                <div class="flex items-center gap-6">
+                                    <div class="hidden md:block">
+                                        <a href="#" class="grid place-content-center w-9 lg:w-12 aspect-square rounded-full bg-brand-50 hover:bg-brand-100/50 transition prev-arrow">
+                                            <i class="ph-bold ph-caret-left"></i>
+                                        </a>
+                                    </div>
+                                    <div class="flex-1">
+                                        <div class="relative z-[2] grid place-content-center bg-white w-[100px] md:w-[64px] lg:w-[120px] aspect-square rounded-full border-2 border-brand-50 mx-auto md:-mb-[32px] lg:-mb-[60px]">
+                                            <img src="../assets/images/testimonial-logo.png" alt="" class="w-[46px] md:w-[30px] lg:w-[56px]" />
+                                        </div>
+                                        <div class="relative z-[1] md:border border-brand bg-white p-6 lg:p-[64px] rounded-lg md:rounded-[48px] text-center mt-6 md:mt-0">
+                                            <div class="max-w-[374px] lg:max-w-[667px] mx-auto md:pt-[32px] lg:pt-[40px]">
+                                                <h3 class="text-[18px] lg:text-[30px] text-brand font-bold">Jane Doe</h3>
+                                                <p class="text-[14px] lg:text-[20px] mt-4">Genzed has been an exceptional financial partner for our company. They provide clear insights and ensure the smooth operation of our financial systems.</p>
+                                                <div class="text-[#002540] mt-8 !leading-[120%]">
+                                                    <span class="block text-md font-bold">CEO</span>
+                                                    <span>Tech Solutions</span>
+                                                </div>
+                                            </div>
+                                            <img src="../assets/images/quote.png" alt="" class="hidden md:block absolute -z-[1] left-6 md:left-[64px] top-6 md:top-[64px] rotate-180 w-[27px] lg:w-[40px]" />
+                                            <img src="../assets/images/quote.png" alt="" class="hidden md:block absolute -z-[1] right-6 md:right-[64px] bottom-6 md:bottom-[64px] w-[27px] lg:w-[40px]" />
+                                        </div>
+                                    </div>
+                                    <div class="hidden md:block">
+                                        <a href="#" class="grid place-content-center w-9 lg:w-12 aspect-square rounded-full bg-brand-50 hover:bg-brand-100/50 transition next-arrow">
+                                            <i class="ph ph-caret-right"></i>
+                                        </a>
+                                    </div>
+                                </div>
                             </div>
                         </div>
+
+                        <!-- Navigation Dots -->
                         <div class="flex items-center mt-6">
                             <div class="md:hidden">
                                 <a href="#" class="grid place-content-center w-10 lg:w-10 aspect-square rounded-full text-[20px] bg-brand-50 hover:bg-brand-100/50 transition">
                                     <i class="ph-bold ph-caret-left"></i>
                                 </a>
                             </div>
-                            <div class="flex-1 flex justify-center">
-                                <ul class="flex gap-2 [&>li]:h-3 md:[&>li]:h-[6px] lg:[&>li]:h-3 [&>li:not(.active)]:aspect-square [&>li.active]:w-[37px] md:[&>li.active]:w-[20px] lg:[&>li.active]:w-[37px] [&>li.active]:bg-brand [&>li]:bg-brand-50 [&>li]:rounded-full">
+                            <div class="flex-1 flex justify-center" id="cusonsliderDot">
+                                <ul class="slick-dots flex gap-2 [&>li]:h-3 md:[&>li]:h-[6px] lg:[&>li]:h-3 [&>li:not(.active)]:aspect-square [&>li.active]:w-[37px] md:[&>li.active]:w-[20px] lg:[&>li.active]:w-[37px] [&>li.active]:bg-brand [&>li]:bg-brand-50 [&>li]:rounded-full">
                                     <li></li>
-                                    <li class="active"></li>
+                                    <li class="slick-active"></li>
                                     <li></li>
                                     <li></li>
                                 </ul>
@@ -998,46 +1114,67 @@
                             <a href="#" class="btn btn-outline lg:!h-[48px] !px-8">All Blogs</a>
                         </div>
                     </div>
+                    <!-- mobile blog -->
                     <div class="md:hidden mt-8">
-                        <div class="flex items-center mb-6">
-                            <div class="">
+                        <div class="blog-items">
+                            <div class="rounded-b-lg rounded-t-2xl overflow-clip shadow-xl text-center">
+                                <img src="../assets/images/blog.png" alt="" class="w-full" />
+                                <div class="p-3 lg:p-4">
+                                    <div class="relative rounded-lg lg:rounded-2xl bg-white border border-brand-50 p-4 md:p-2 lg:p-4 -mt-[50px] md:-mt-[80px]">
+                                        <div>
+                                            <p class="text-[14px] md:text-[10px] lg:text-[14px]">June 15 2024 - Author Name mobile</p>
+                                            <p class="flex justify-center flex-wrap gap-x-3 lg:gap-x-4 gap-y-1 text-[14px] md:text-[10px] lg:text-[14px] text-brand mt-1"><span>Insights sights</span><span>Another sights</span><span>Insights</span><span>Important Insights</span></p>
+                                        </div>
+                                        <h3 class="mt-3 lg:mt-4 text-[20px] md:text-[13px] lg:text-[20px] text-[#002540] !font-semibold">QuickBooks Bookkeeping Services - Outsourced</h3>
+                                        <p class="mt-4 md:mt-2 text-[16px] md:text-[13px] lg:text-[16px] text-[#002540]">Discover how data insights drive success. Learn actionable strategies for informed business decisions in a data-driven world.</p>
+
+                                        <a href="#" class="btn text-primary text-[16px] md:text-[14px] lg:text-[18px] mt-4 md:mt-3 lg:mt-4">Read more</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="rounded-b-lg rounded-t-2xl overflow-clip shadow-xl text-center">
+                                <img src="../assets/images/blog.png" alt="" class="w-full" />
+                                <div class="p-3 lg:p-4">
+                                    <div class="relative rounded-lg lg:rounded-2xl bg-white border border-brand-50 p-4 md:p-2 lg:p-4 -mt-[50px] md:-mt-[80px]">
+                                        <div>
+                                            <p class="text-[14px] md:text-[10px] lg:text-[14px]">June 15 2024 - Author Name mobile</p>
+                                            <p class="flex justify-center flex-wrap gap-x-3 lg:gap-x-4 gap-y-1 text-[14px] md:text-[10px] lg:text-[14px] text-brand mt-1"><span>Insights sights</span><span>Another sights</span><span>Insights</span><span>Important Insights</span></p>
+                                        </div>
+                                        <h3 class="mt-3 lg:mt-4 text-[20px] md:text-[13px] lg:text-[20px] text-[#002540] !font-semibold">QuickBooks Bookkeeping Services - Outsourced</h3>
+                                        <p class="mt-4 md:mt-2 text-[16px] md:text-[13px] lg:text-[16px] text-[#002540]">Discover how data insights drive success. Learn actionable strategies for informed business decisions in a data-driven world.</p>
+
+                                        <a href="#" class="btn text-primary text-[16px] md:text-[14px] lg:text-[18px] mt-4 md:mt-3 lg:mt-4">Read more</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="flex items-center mb-6" id="blogNav">
+                            <div class="prev-arrow">
                                 <a href="#" class="grid place-content-center w-10 lg:w-10 aspect-square rounded-full text-[20px] bg-brand-50 hover:bg-brand-100/50 transition">
                                     <i class="ph-bold ph-caret-left"></i>
                                 </a>
                             </div>
                             <div class="flex-1 flex justify-center">
-                                <ul class="flex gap-2 [&>li]:h-3 md:[&>li]:h-[6px] lg:[&>li]:h-3 [&>li:not(.active)]:aspect-square [&>li.active]:w-[37px] md:[&>li.active]:w-[20px] lg:[&>li.active]:w-[37px] [&>li.active]:bg-brand [&>li]:bg-brand-50 [&>li]:rounded-full">
+                                <!-- <ul class="flex gap-2 [&>li]:h-3 md:[&>li]:h-[6px] lg:[&>li]:h-3 [&>li:not(.active)]:aspect-square [&>li.active]:w-[37px] md:[&>li.active]:w-[20px] lg:[&>li.active]:w-[37px] [&>li.active]:bg-brand [&>li]:bg-brand-50 [&>li]:rounded-full">
                                     <li></li>
                                     <li class="active"></li>
                                     <li></li>
                                     <li></li>
-                                </ul>
+                                </ul> -->
                             </div>
-                            <div class="">
+                            <div class="next-arrow">
                                 <a href="#" class="grid place-content-center w-10 lg:w-10 aspect-square rounded-full text-[20px] bg-brand-50 hover:bg-brand-100/50 transition">
                                     <i class="ph-bold ph-caret-right"></i>
                                 </a>
                             </div>
                         </div>
-                        <div class="rounded-b-lg rounded-t-2xl overflow-clip shadow-xl text-center">
-                            <img src="../assets/images/blog.png" alt="" class="w-full" />
-                            <div class="p-3 lg:p-4">
-                                <div class="relative rounded-lg lg:rounded-2xl bg-white border border-brand-50 p-4 md:p-2 lg:p-4 -mt-[50px] md:-mt-[80px]">
-                                    <div>
-                                        <p class="text-[14px] md:text-[10px] lg:text-[14px]">June 15 2024 - Author Name</p>
-                                        <p class="flex justify-center flex-wrap gap-x-3 lg:gap-x-4 gap-y-1 text-[14px] md:text-[10px] lg:text-[14px] text-brand mt-1"><span>Insights sights</span><span>Another sights</span><span>Insights</span><span>Important Insights</span></p>
-                                    </div>
-                                    <h3 class="mt-3 lg:mt-4 text-[20px] md:text-[13px] lg:text-[20px] text-[#002540] !font-semibold">QuickBooks Bookkeeping Services - Outsourced</h3>
-                                    <p class="mt-4 md:mt-2 text-[16px] md:text-[13px] lg:text-[16px] text-[#002540]">Discover how data insights drive success. Learn actionable strategies for informed business decisions in a data-driven world.</p>
-
-                                    <a href="#" class="btn text-primary text-[16px] md:text-[14px] lg:text-[18px] mt-4 md:mt-3 lg:mt-4">Read more</a>
-                                </div>
-                            </div>
-                        </div>
-                        <div>
-                            <a href="#" class="btn btn-lg btn-outline w-full mt-8 rounded">All Blogs</a>
-                        </div>
                     </div>
+
+                    <div>
+                        <a href="#" class="md:hidden btn btn-lg btn-outline w-full mt-8 rounded">All Blogs</a>
+                    </div>
+
+                    <!-- Desktop blog -->
                     <div class="hidden md:grid grid-cols-1 md:grid-cols-3 items-start gap-8 mt-8 lg:mt-12">
                         <div class="group/blog rounded-lg lg:rounded-2xl overflow-clip shadow-lg">
                             <img src="../assets/images/blog.png" alt="" class="w-full" />
@@ -1411,6 +1548,9 @@
         </main>
 
         <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+        <script src="../assets/lib/jquery-modal-video.min.js"></script>
+        <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+
         <script>
             $(document).ready(function () {
                 // Toggle mobile menu on hamburger click
@@ -1426,6 +1566,48 @@
                     $("#iconChange2").toggleClass("hidden"); // Show/Hide the mobile menu
                     $("#iconChange1").toggleClass("hidden"); // Show/Hide the mobile menu
                 });
+
+                //video modal
+                $(".js-modal-btn").modalVideo();
+
+                // testimonial slider
+                $(".testimonial-slider").slick({
+                    dots: true,
+
+                    arrows: true,
+                    prevArrow: $(".prev-arrow"),
+                    nextArrow: $(".next-arrow"),
+                    responsive: [
+                        {
+                            breakpoint: 768,
+                            settings: {
+                                slidesToShow: 1,
+                                slidesToScroll: 1,
+                            },
+                        },
+                    ],
+                });
+
+                // Blog slider
+                $(".blog-items").slick({
+                    dots: true, // Show pagination dots
+                    customPaging: function (slider, i) {
+                        return '<button class="pagination-dot"></button>';
+                    },
+                    arrows: true, // Use custom next/prev arrows
+                    prevArrow: $(".prev-arrow a"),
+                    nextArrow: $(".next-arrow a"),
+                    responsive: [
+                        {
+                            breakpoint: 768,
+                            settings: {
+                                slidesToShow: 1,
+                                slidesToScroll: 1,
+                            },
+                        },
+                    ],
+                });
+
                 // Object holding the data for each address
                 const addresses = {
                     address1: {
@@ -1499,11 +1681,11 @@
                 var scroll = $(window).scrollTop();
                 if (scroll >= 100) {
                     //clearHeader, not clearheader - caps H
-                    $("#navSticky").addClass("w-full fixed bg-white py-3");
+                    $("#navSticky").addClass("w-full top-0 fixed bg-white py-3");
                     $("#stikcyBtn").removeClass("btn-outline");
                     $("#stikcyBtn").addClass("btn-primary");
                 } else {
-                    $("#navSticky").removeClass("fixed bg-white py-3");
+                    $("#navSticky").removeClass("fixed top-0  bg-white py-3");
                     $("#stikcyBtn").addClass("btn-outline");
                     $("#stikcyBtn").removeClass("btn-primary");
                 }
